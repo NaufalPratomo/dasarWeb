@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
 }
@@ -18,4 +19,19 @@ body {
     padding: 20px;
     box-sizing: border-box;
     display: flex;
+    border-radius: 65px;
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar-satu {
+    width: 1400px;
+}
+
+.sidebar-dua {
+    width : 1200px;
+}
+
+img {
+    width: 80%;
+    height: auto;
 }
