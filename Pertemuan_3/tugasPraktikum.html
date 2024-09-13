@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        height: 100%;
+      }
+
+      .header-img {
+        width: 100%;
+        height: 20%;
+        object-fit: cover;
+      }
+
+      form {
+        margin-left: 50px;
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      src="https://e1.pxfuel.com/desktop-wallpaper/726/932/desktop-wallpaper-gta-v-los-santos-original-quality-mostly-gta.jpg"
+      alt="Header Image"
+      class="header-img"
+    />
+
+    <form action="#">
+      <table>
+        <tr>
+          <td>Nama</td>
+          <td><input type="text" id="nama" /></td>
+        </tr>
+
+        <tr>
+          <td>Alamat</td>
+          <td><textarea id="alamat"></textarea></td>
+        </tr>
+
+        <tr>
+          <td>Tanggal lahir</td>
+          <td><input type="text" id="tanggalLahir" /></td>
+        </tr>
+
+        <tr>
+          <td>Jenis Kelamin</td>
+          <td><input type="checkbox" id="jenisKelaminLaki" />Laki Laki</td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td><input type="checkbox" id="jenisKelaminPerempuan" />Perempuan</td>
+        </tr>
+
+        <tr>
+          <td>Hobby</td>
+          <td><input type="checkbox" id="hobby1" />Berenang</td>
+          <td><input type="checkbox" id="hobby2" />Berlari</td>
+          <td><input type="checkbox" id="hobby3" />Lain-lain</td>
+        </tr>
+
+        <tr>
+          <td>Pekerjaan</td>
+          <td><input type="checkbox" id="pekerjaan1" />Swasta</td>
+          <td><input type="checkbox" id="pekerjaan2" />PNS</td>
+          <td><input type="checkbox" id="pekerjaan3" />Lain-lain</td>
+        </tr>
+
+        <tr>
+          <td>
+            <input type="checkbox" id="dataCompleteCheckbox" />Check Jika anda akan mengirimkan data ini
+          </td>
+        </tr>
+
+        <tr>
+          <td><button type="button" onclick="validateForm()">Cek!</button></td>
+        </tr>
+      </table>
+    </form>
+    <script>
+      function validateForm() {
+        var nama = document.getElementById("nama").value;
+        var alamat = document.getElementById("alamat").value;
+        var tanggalLahir = document.getElementById("tanggalLahir").value;
+        var jenisKelamin = document.getElementById("jenisKelaminLaki").checked || document.getElementById("jenisKelaminPerempuan").checked;
+        var hobby = document.getElementById("hobby1").checked || document.getElementById("hobby2").checked || document.getElementById("hobby3").checked;
+        var pekerjaan = document.getElementById("pekerjaan1").checked || document.getElementById("pekerjaan2").checked || document.getElementById("pekerjaan3").checked;
+        var dataCompleteCheckbox = document.getElementById("dataCompleteCheckbox").checked;
+
+        if (!nama || !alamat || !tanggalLahir || !jenisKelamin || !hobby || !pekerjaan || !dataCompleteCheckbox) {
+          alert("Data belum lengkap. Mohon isi semua field dan centang kotak jika ingin mengirimkan data.");
+        } else {
+          alert("Data telah terkirim!");
+        }
+      }
+    </script>
+  </body>
+</html>
