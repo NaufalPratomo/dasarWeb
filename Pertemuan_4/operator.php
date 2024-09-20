@@ -51,4 +51,14 @@ echo "Hasil OR: " . var_export($hasilor, true) . "<br>";
 echo "Hasil NOT A: " . var_export($hasilNotA, true) . "<br>";
 echo "Hasil NOT B: " . var_export($hasilNotB, true) . "<br>";
 echo "<br><br>";
+
+echo "Hasil AND: " . var_export($hasiland, true) . "<br>";
+echo "Hasil OR: " . var_export($hasilor, true) . "<br>";
+echo "Hasil NOT A: " . var_export($hasilNotA, true) . "<br>";
+echo "Hasil NOT B: " . var_export($hasilNotB, true) . "<br>";
+echo "<br><br>";
+
+echo "Hasil Identik: " . ($hasilIdentik ? 'true' : 'false') . "<br>";
+echo "Hasil Tidak Identik: " . ($hasilTidakIdentik ? 'true' : 'false');
+echo "<br><br>";
 ?>
