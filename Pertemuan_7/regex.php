@@ -22,13 +22,12 @@ $text = 'I like apple pie. ';
 $new_text = preg_replace($pattern, $replacement, $text);
 echo $new_text . "<br>"; // Output: "I like banana pie."
 
-$pattern = '/go?d/'; // Cocokkan "gd" atau "god"
+$pattern = '/go{1,2}d/'; // Cocokkan "god" atau "good"
 $text = 'god is good.';
 if (preg_match($pattern, $text, $matches)) {
     echo "Cocokkan: " . $matches[0] . "<br>";
 } else {
     echo "Tidak ada yang cocok! <br>";
 }
-
 ?>
 
